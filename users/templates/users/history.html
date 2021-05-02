@@ -1,0 +1,38 @@
+{% extends 'users/layout.html' %}
+
+{% block head %}
+    <link rel = "stylesheet" href = "/static/users/stylesheet/history_css.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="container_main">
+    <main>
+    </main>
+    <main>
+        <!-- Main content -->
+        <br>
+        <br>
+        <div class="form">
+            <br>
+            <h2>HISTORY</h2>
+            <h4>In case you want the processed files again, take it from here~</h4>
+            <table>
+                <tr>
+                    <th style="text-align: left" ><label>FILE NAME</label></th>
+                    <th><label>DOWNLOAD</label></th>
+                </tr>
+                {% for user_history in history %}
+                <tr>
+                    <td style="text-align: left" >{{user_history.1}}</td>
+                    <td>
+                        <button class="button" onclick="location.href='{% url 'download' user_history.0 user_history.1 user_history.2 %}'">Download</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

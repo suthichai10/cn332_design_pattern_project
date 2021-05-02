@@ -1,0 +1,28 @@
+{% extends 'users/layout.html' %}
+
+{% block head %}
+    <link rel = "stylesheet" href = "/static/users/stylesheet/index_css.css">
+{% endblock %}
+
+{% block body %}
+<div class="container_main">
+    <main>
+
+    </main>
+    <main>
+        <!-- Main content -->
+        <br>
+        <br>
+        <div class="form">
+            <br>
+            <br>
+            <br>
+            <h2>WELCOME TO EZPDF</h2>
+            <h4>THE FAST AND EASY APPLICATION FOR MANAGING PDF FILES.</h4>
+            <button class="block" disabled>CHOOSE YOUR TOOLS</button><button class="button" onclick="location.href='{% url 'merge' %}'">MERGE</button><button class="button" onclick="location.href='{% url 'split' %}'">SPLIT</button><button class="button" onclick="location.href='{% url 'delete' %}'" style="border-right: 1px solid #000000;">DELETE</button>
+        </div>
+
+    </main>
+</div>
+
+{% endblock %}

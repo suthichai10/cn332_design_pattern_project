@@ -1,0 +1,100 @@
+.container_head {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto auto;
+    background-color: #1c1c1c;
+}
+
+.container_main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: auto auto auto;
+    /*height: 80vh;*/
+    background-color: #ffffff;
+}
+
+.container_footer {
+    background-color: #9f9e9e;
+    height: 10vh;
+}
+
+.container_head a:link, a:visited {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container_head a:hover, a:active {
+    background-color: #1c1c1c;
+}
+
+.container_main .button a:link {
+  background-color: #1c1c1c;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.container_main .button a:hover, a:active {
+  color: #bcbcbc;
+}
+
+.site-nav ul {
+    margin-top: 30px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.site-nav li {
+    list-style: none;
+    float: left;
+    margin-left: 15px;
+    text-align: right;
+}
+
+.site-nav {
+    padding-left: 5px;
+}
+
+.site-nav a {
+    font-size: 120%;
+}
+
+.site-nav a:hover {
+    color: #bcbcbc;
+}
+
+.site-login {
+    padding-right: 5px;
+}
+
+.site-login ul {
+    margin-top: 30px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.site-login li {
+    list-style: none;
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+}
+
+.site-login a {
+    font-size: 120%;
+}
+
+.site-login a:hover {
+    color: #bcbcbc;
+}

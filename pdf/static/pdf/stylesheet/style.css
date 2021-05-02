@@ -1,0 +1,35 @@
+nav {
+    display : inline-block;
+}
+h1 {
+    color : red;
+    text-shadow: 3px 2px black;
+    margin-top : 0px;
+    margin-bottom : 0px;
+}
+ul {
+    padding-left : 0px;
+    list-style-type: none;
+    overflow: hidden;
+    margin : 0px 0px 0px 0px;
+}
+li {
+    float : left;
+}
+li a {
+    background-color : lightblue;
+    display: block;
+    padding : 5px;
+    text-align : center;
+    border : 1px solid green;
+}
+a:hover {
+    font-size : 13px;
+    background-color : white;
+}
+p {
+    display : block;
+}
+.main-area {
+    max-width : 400px;
+}

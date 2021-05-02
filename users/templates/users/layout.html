@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EZPDF</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "/static/users/stylesheet/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" media="screen and (max-width: 700px)" href="{% static 'users/stylesheet/grid_mobile.css' %}" /> -->
+    <!-- <link rel="stylesheet" media="screen and (min-width: 701px)" href="{% static 'users/stylesheet/grid.css' %}" /> -->
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+
+    <div class = "container-nav">
+        <a href ="{% url 'index' %}" aria-current="page" class ="logo-link">
+            <h1 class="logo"> EZPDF</h1>
+        </a>
+        <nav role="navigation" class="nav-menu">
+            {% if  not request.user.is_authenticated %}
+            <a href ="{% url 'login' %}" aria-current="page" class="nav-link"><h4>Sign in 📲</h4></a>
+            <a href ="{% url 'register' %}" aria-current="page" class="nav-link"><h4>Sign up 💻</h4></a>
+            {% else %}
+            <a href = "{% url 'history' %}" aria-current="page" class="nav-link"> <h4>History 📚</h4></a>
+            <a href="{% url 'logout' %}" aria-current="page" class="nav-link"><h4>Sign out 📴</h4></a>
+            {% endif %}
+        </nav>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+<div class="container_space">
+    <main></main>
+</div>
+
+<div class="container_footer">
+    <footer>
+    </footer>
+    <footer>
+        <h4>ABOUT EZPDF</h4>
+        <p>EZPDF is a Web Application for editing PDF file. It's easy and fast. Unlimited file upload. Have a historical record of edited files.</p>
+    </footer>
+    <footer>
+    </footer>
+    <footer>
+        <h4>ABOUT US</h4>
+        <a href="https://www.pivotaltracker.com/n/projects/2470460"><p><i class="fa fa-cog" aria-hidden="true"></i> Pivotal Tracker</p></a>
+        <a href="https://github.com/prachpalm/cn340_project.git"><p><i class="fa fa-github" aria-hidden="true"></i> Github</p></a>
+        <a href="https://drive.google.com/drive/folders/13r7lWBCVqx4GgN42JZxyjSH7kzFDsJ9K?usp=sharing"><p><i class="fa fa-file-text" aria-hidden="true"></i> Requirements</p></a>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'pdf/layout.html' %}
+{% block body %}
+    <div class = "container">
+        <header class = "site-header">
+            <h1>EZPDF</h1>
+            <nav>
+                <ul>
+                    <li><a href = "">Home</a></li>
+                    <li><a href = "">History</a></li>
+                    {% if True %}
+                        <li><a href = "">Login</a></li>
+                    {% else %}
+                        <li><a href = "">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main class = "main-area">
+
+        </main>
+        <aside class = "sidebar-area">
+            <p>pdf option</p>
+        </aside>
+        <footer class = "site-footer">
+            <p>test footer</p>
+        </footer>
+    </div>
+{% endblock %}

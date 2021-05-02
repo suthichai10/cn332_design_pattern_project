@@ -1,0 +1,37 @@
+{% extends 'users/layout.html' %}
+{% block body %}
+<div class="container_main">
+    <main>
+    </main>
+    <main>
+        <br>
+        <br>
+        <h2 style="text-align: center; font-size: 48px;">Welcome to EZPDF</h2>
+        <br>
+        <br>
+        <div class="form">
+            <br>
+            <h2>Upload PDF file</h2>
+            <form method = "POST" action = "{% url 'upload' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <br>
+                <br>
+                <div class="test">
+                    <input type = 'file' name = 'upload' id="upload" accept = '.pdf' hidden>
+                    <label for="upload">Choose File</label>
+                    <span id="file_chosen">No file chosen</span>
+                </div>
+                <br>
+                <br>
+                <input type = 'submit' name = 'submit'>
+            </form>
+            {% if not request.user.is_authenticated %}
+                <h5>If you did not have account <a href = "{% url 'register' %}">Sign Up</a> here</h5>
+            {% else %}
+                <br>
+            {% endif %}
+            <br>
+        </div>
+    </main>
+</div>
+{% endblock %}

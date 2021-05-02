@@ -1,0 +1,5 @@
+body {
+  font-family : Impact , serif , sans-serif ;
+  background : url('/static/pdf/images/background.jpg') no-repeat fixed 50% top;
+  background-size: 100% 100%;
+}

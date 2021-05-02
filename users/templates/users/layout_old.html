@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EZPDF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel = "stylesheet" media = "screen" href = "{% static 'users/stylesheet/background.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="{% static 'users/stylesheet/grid_mobile.css' %}" />
+    <link rel="stylesheet" media="screen and (min-width: 701px)" href="{% static 'users/stylesheet/grid.css' %}" />
+    <link rel = "stylesheet" href = "{% static 'users/stylesheet/style.css' %}">
+</head>
+<body>
+
+<div class="container_head">
+    <header>
+        <!-- Header content -->
+        <a href="{% url 'index' %}"><h1>EZPDF</h1></a>
+    </header>
+
+    <nav class="site-nav">
+        <!-- Navigation -->
+        <div class="dropdown">
+            <input type="checkbox" id="checkbox-toggle">
+            <label for="checkbox-toggle">Content <i class="fa fa-chevron-down" aria-hidden="true"></i></label>
+            <ul>
+                <li><a href="{% url 'about' %}" style="padding-right: 45px; text-align: left;">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="site-login">
+        <!-- Navigation 2 -->
+        <ul>
+            {% if  not request.user.is_authenticated %}
+                <!--<li><a href="{% url 'register' %}">Sign up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>-->
+                <li><a href="{% url 'login' %}">Sign in <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            {% else %}
+                <li><a href="{% url 'logout' %}">Sign out <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+                <li style =  "color : white; font-size: 20px;" ><i class="fa fa-user-circle" aria-hidden="true"></i> {{request.user.username}}</li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+    {% block body %}
+    {% endblock %}
+
+<script>
+
+const actualBtn = document.getElementById('upload');
+
+const fileChosen = document.getElementById('file_chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+
+</script>
+
+</body>
+</html>

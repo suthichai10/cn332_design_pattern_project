@@ -1,0 +1,215 @@
+form input {
+    position : relative;
+    margin-left : auto;
+    margin-right : auto;
+    width : 300px;
+}
+
+@media screen and (max-width : 450px) {
+    form input {
+        position : relative;
+        margin-left : auto;
+        margin-right : auto;
+        width : 200px;
+    }
+}
+
+@media screen and (max-width : 300px) {
+    form input {
+        position : relative;
+        margin-left : auto;
+        margin-right : auto;
+        width : 140px;
+    }
+}
+
+input { font-family: 'FontAwesome';}
+
+header {
+    color: #f6f6f6;
+}
+
+li {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+input[type=text], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 70%;
+    background-color: #8d8d8d;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: #7a7a7a;
+}
+
+/* Dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.dropdown input[type=checkbox] {
+    display: none;
+}
+
+.dropdown label {
+    display: block;
+    font-size: 120%;
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 15px;
+    padding-top: 30px;
+
+    cursor: pointer;
+    text-align: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dropdown label:hover {
+    color: #888888;
+}
+
+.dropdown ul {
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+
+.dropdown ul li {
+    background-color: #1c1c1c;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+    background-color: #1c1c1c;
+    color: #888888;
+}
+
+.dropdown ul li a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.dropdown input[type=checkbox]:checked ~ label {
+    background-color: #1c1c1c;
+}
+
+
+.dropdown input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+/* Form */
+
+.form {
+    display: block;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 5px 10px 15px #888888;
+}
+
+.form h5 a {
+    color: #1c1c1c;
+    background-color: #f2f2f2;
+}
+
+.form h5 a:hover, a:active{
+    color: #888888;
+    background-color: #f2f2f2;
+}
+
+/* test */
+
+.test label{
+    font-size: 80%;
+    background-color: #8d8d8d;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.test label:hover {
+    background-color: #7a7a7a;
+}
+
+
+
+button[type=submit] {
+    width: 70%;
+    background-color: #8d8d8d;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button[type=submit]:hover {
+    background-color: #7a7a7a;
+}
+

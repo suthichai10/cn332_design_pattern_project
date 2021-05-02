@@ -1,0 +1,32 @@
+{% extends 'users/layout2.html' %}
+
+{% block head %}
+    <link rel = "stylesheet" href = "/static/users/stylesheet/login_css.css">
+{% endblock %}
+
+{% block body %}
+<div class="container_main">
+    <main>
+    </main>
+    <main>
+        <br>
+        <br>
+        <div class="form">
+            <div class="block">
+                <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i></h2>
+                <h4>Sign Up</h4>
+                {{ message }}
+                <form action = "{% url 'register' %}" method = 'POST'>
+                    {% csrf_token %}
+                <p><input type = 'text' name = 'username' placeholder = "Username" autocomplete="off" required></p>
+                <p><input type = 'email' name = 'email' placeholder = 'Email' autocomplete="off" required></p>
+                <p><input type = 'password' name = 'password' placeholder = 'Password' required></p>
+                <p><input type  = 'password' name = 'repeated_password' placeholder = 'Confirm Password' required></p>
+                <p><input type = 'submit' name = 'login' value = "SIGN UP"></p>
+                </form>
+                <h5>Already have an account? <a href = "{% url 'login' %}">Sign In</a> here</h5>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

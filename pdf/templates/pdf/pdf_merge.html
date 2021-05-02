@@ -1,0 +1,38 @@
+{% extends 'users/layout.html' %}
+
+{% block head %}
+    <link rel = "stylesheet" href = "/static/users/stylesheet/merge_css.css">
+{% endblock %}
+
+{% block body %}
+<div class="container_main">
+    <main>
+    </main>
+    <main>
+        <br>
+        <br>
+        <div class="form">
+            <br>
+            <h2>MERGE</h2>
+            <h4>BRING THE PDF FILE TO UPLOAD THEN ADD THE ANOTHER PDF FILE TO MERGE.</h4>
+            <form method="POST" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th><label>FIRST FILE</label></th>
+                    <th><label>SECOND FILE</label></th>
+                </tr>
+                <tr>
+                    <td>{{ form.file1 }}</td>
+                    <td>{{ form.file2 }}</td>
+                </tr>
+            </table>
+            {{ message }}
+            <br>
+            <br>
+            <input type="submit" value="MERGE">
+            </form>
+        </div>
+    </main>
+</div>
+{% endblock %}
